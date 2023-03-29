@@ -4,7 +4,7 @@
 #define MAX 100
 void nhap (int a[], int &n) {
 do {
-printf_s("\nNhập số phần tử, lưu ý số lượng phần tử lớn hơn 0 và nhỏ hơn 100:");
+printf_s("\nNhap so phan tu (0<=n<=100):");
 scanf_s("%d", &n);
 if(n <= 0 || n > MAX) {
 printf_s("\nSo phan tu khong hop le. Xin kiem tra lai !");
