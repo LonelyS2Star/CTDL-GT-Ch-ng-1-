@@ -1,0 +1,30 @@
+# CTDL-GT-Chuong1
+
+#include<stdio.h>
+#include<conio.h>
+long TINHXN (int n);
+long TINHYN (int n);
+
+long TINHXN (int n)
+{
+	if (n==0)
+	return 1;
+	return TINHXN(n-1)+ TINHYN(n-1);
+}
+long TINHYN (int n)
+{	
+	if (n==0)
+	return 0;
+	return 3*TINHXN(n-1)+ 2*TINHYN(n-1);
+}
+int main()
+{
+	int n;
+	printf("Nhap n : ");
+	scanf("%d",&n);
+	long kq1=TINHXN(n);
+	long kq2=TINHYN(n);
+	print("\nX(n) = %d,Y(n) = %d",kq1,kq2);
+	getch();
+	return 0;
+}
