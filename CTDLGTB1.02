@@ -1,0 +1,24 @@
+# CTDL-GT-Chuong1
+Viết hàm đệ quy tính tổng của biểu thức sau đây: S(x, n) = x + x^2/2! + x^3/3! + … + x^n/n!
+#include<stdio.h>
+#include<conio.h>
+float TINHS(float x,int n)
+{
+	if (n==0)
+	return 0;
+	if (n==1)
+	return x;
+	return (1+x/n) *TINHS(x,n-1)-(x/n)*TINHS(x,n-2);
+}
+int main()
+{
+	float x;
+	int n;
+	printf("Nhap x : "); 
+	scanf("%f",&x);
+	printf("Nhap n : ");scanf("%d",&n);
+	float kq=TINHS(x,n);
+	print("\nS bang : %.2f",kq);
+	getch();
+	return 0;
+}
